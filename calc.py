@@ -29,11 +29,12 @@ def calculate(event):
             index = label["text"].index("*")
         elif "/" in label["text"]:
             index = label["text"].index("/")
-        print("=")
         part_1 = label["text"][0:index]
         part_2 = label["text"][index+1:]
         symbol = label["text"][index]
-        if symbol == "+":
+        if int(part_2) == 0:
+            pass 
+        elif symbol == "+":
             label["text"] = str(int(part_1)+int(part_2))
         elif symbol == "-":
             label["text"] = str(int(part_1) - int(part_2))
