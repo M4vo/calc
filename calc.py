@@ -3,10 +3,7 @@ import tkinter.messagebox
 
 result = ""
 
-
 root = Tk()
-
-#calculation = False
 
 #Checking if provided text contain +-*/ and return true or false
 def is_calculating(text):
