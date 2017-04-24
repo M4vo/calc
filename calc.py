@@ -6,7 +6,7 @@ result = ""
 
 root = Tk()
 
-calculation = False
+#calculation = False
 
 #Checking if provided text contain +-*/ and return true or false
 def is_calculating(text):
@@ -35,13 +35,13 @@ def calculate(event):
         if int(part_2) == 0:
             pass
         elif symbol == "+":
-            label["text"] = str(int(part_1)+int(part_2))
+            label["text"] = str(float(part_1) + float(part_2))
         elif symbol == "-":
-            label["text"] = str(int(part_1) - int(part_2))
+            label["text"] = str(float(part_1) - float(part_2))
         elif symbol == "*":
-            label["text"] = str(int(part_1) * int(part_2))
+            label["text"] = str(float(part_1) * float(part_2))
         elif symbol == "/":
-            label["text"] = str(int(part_1) / int(part_2))
+            label["text"] = str(float(part_1) / float(part_2))
 
 
 def add_add(event):
