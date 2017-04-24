@@ -33,7 +33,7 @@ def calculate(event):
         part_2 = label["text"][index+1:]
         symbol = label["text"][index]
         if int(part_2) == 0:
-            pass 
+            pass
         elif symbol == "+":
             label["text"] = str(int(part_1)+int(part_2))
         elif symbol == "-":
@@ -70,6 +70,9 @@ def add_divide(event):
 
 def cls(event):
     label["text"] = ""
+
+def remove_last(event):
+    label["text"] = label["text"][0:-1]
 
 # Adds number to current label text
 def add_1(event):
@@ -178,6 +181,10 @@ button_equal.grid(row=4, column=2)
 
 button_cls = Button(root, text="CLS", width=2, height=2)
 button_cls.bind("<Button-1>", cls)
-button_cls.grid(row=4, column=0)
+button_cls.grid(row=5, column=1)
+
+button_remove = Button(root, text="CLL", width=2, height=2)
+button_remove.bind("<Button-1>", remove_last)
+button_remove.grid(row=5, column=2)
 
 root.mainloop()
